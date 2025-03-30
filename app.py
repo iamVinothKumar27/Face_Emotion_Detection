@@ -2,10 +2,7 @@ from flask import Flask, render_template, Response
 import cv2
 import tensorflow as tf
 import numpy as np
-
 app = Flask(__name__)
-
-# Load your emotion detection model
 model = tf.keras.models.load_model('final_model_ishu3.h5')
 def preprocess_frame(frame):
     # Resize frame to fit model's expected input
@@ -17,7 +14,6 @@ def preprocess_frame(frame):
     # Expand dimensions to match the model's input format
     frame_expanded = np.expand_dims(frame_normalized, axis=0)
     return frame_expanded
-
 def gen_frames():
     camera = cv2.VideoCapture(0) 
     if not camera.isOpened():
