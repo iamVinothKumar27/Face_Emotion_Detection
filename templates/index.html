@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Live Emotion Detection</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            color: #333;
+        }
+        img {
+            border: 4px solid #555;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Live Emotion Detection Stream</h1>
+        <img src="{{ url_for('video_feed') }}" width="640" height="480" autoplay>
+    </div>
+</body>
+</html>
