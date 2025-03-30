@@ -7,7 +7,6 @@ app = Flask(__name__)
 
 # Load your emotion detection model
 model = tf.keras.models.load_model('final_model_ishu3.h5')
-
 def preprocess_frame(frame):
     # Resize frame to fit model's expected input
     frame_resized = cv2.resize(frame, (224, 224))  # Example size, adjust as necessary
